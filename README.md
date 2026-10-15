@@ -1,3 +1,4 @@
+<img width="1200" height="300" alt="exif-batcher-banner" src="https://github.com/user-attachments/assets/33a983c2-4102-4e86-8db6-9603b4805a29" />
 
 # exif-batcher
 
