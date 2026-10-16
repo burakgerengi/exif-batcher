@@ -1,0 +1,20 @@
+[project]
+
+dynamic = ["version"]
+
+name = "exif-batcher"
+authors = [
+  { name="Burak Gerengi", email="burakyigitgerengi@gmail.com" },
+]
+description = "cross-platform image metadata sanitization tool."
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://github.com/burakgerengi/exif-batcher"
+Issues = "https://github.com/burakgerengi/exif-batcher/issues"
