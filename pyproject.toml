@@ -1,8 +1,10 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
-
-dynamic = ["version"]
-
 name = "exif-batcher"
+version = "0.1.0.dev0"
 authors = [
   { name="Burak Gerengi", email="burakyigitgerengi@gmail.com" },
 ]
@@ -14,6 +16,9 @@ classifiers = [
 ]
 license = "GPL-3.0-or-later"
 license-files = ["LICENSE"]
+
+[project.scripts]
+exif-batcher = "exif_batcher.exif_batcher:main"
 
 [project.urls]
 Homepage = "https://github.com/burakgerengi/exif-batcher"
