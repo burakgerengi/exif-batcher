@@ -1,35 +1,20 @@
-# native libraries
-import argparse
-from importlib.metadata import version
+# user libraries
+from . import parser_handler
+from . import eb_file_management
+from . import eb_jpeg_segment_parser
 
 
-def handle_parser() -> None:
-    """
-    handle parser operations.
-    """
-
-    # init parser
-    parser = argparse.ArgumentParser()
-
-    # optional arguments
-    parser.add_argument(
-        "-v",
-        "--version",
-        action="version",
-        version=str(version("exif-batcher")),
-        help="show the script version",
-    )
-
-    parser.parse_args()
-
-
+# maestro
 def main():
     """
     main function to execute the script logic.
     """
 
-    # maestro
-    handle_parser()
+    # handle parser operations
+    parser_handler.EBParserHandler.handle_parser()
+
+    files = eb_file_management.EBFileManager.extract_files_from_folder()
+    eb_jpeg_segment_parser.EBJPEGSegmentParser.get_metadata(files)
 
 
 if __name__ == "__main__":
